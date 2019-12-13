@@ -94,3 +94,50 @@ form {
         
     }
 }
+
+.form-hide {
+    animation: down 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes down {
+    from {
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(100vh);
+    }
+}
+
+form.validateError {
+    animation: vibrate 200ms linear, fade paused;
+    animation-iteration-count: 3;
+}
+
+@keyframes vibrate {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    35% {
+        transform: translateX(-15%);
+    }
+    70% {
+        transform: translateX(15%);
+    }
+}
+
+.done {
+    opacity: 0;
+    animation: appear;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
